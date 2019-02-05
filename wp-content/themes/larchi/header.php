@@ -19,13 +19,13 @@
     <?php wp_head(); ?>
   </head>
   <body>
+
     <div id="splashscreen">
     <img class="enter-link" src="<?php echo get_theme_mod('splashscreen', get_bloginfo('template_url').'/img/splashscreen.png'); ?>" alt="Larchi">
     <div class="splashscreen-logo">
     <nav class="navbar navbar-expand-lg navbar-light navbar-custom" >
         <div class="d-flex flex-grow-1">
             <span class="w-100 d-lg-none d-block"><!-- hidden spacer to center brand on mobile --></span>
-            <!-- add position-fixed to navbar brand -->
             <a class="navbar-brand d-none d-lg-inline-block position-fixed" href="#">
               <?php
               $custom_logo_id = get_theme_mod( 'custom_logo' );

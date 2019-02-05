@@ -111,22 +111,22 @@
                 </div>
               </div><!-- row -->
               <div class="row row-equal carousel-item m-t-0">
-                <div class="offset-md-1 col-md-1">
-                  <h2>  02  </h2>
-                  <h4 class="carousel-nav-sm">/ 03</h4>
-                </div>
-                <div class="col-md-4 d-block">
-                  <h4 class="h4-uppercase"><?php echo get_theme_mod('carousel-item-heading2', 'collaboration with tvornica snova'); ?></h4>
-                  <p class="big-line-height carousel-item-txt">
-                    <?php echo get_theme_mod('carousel-item-txt2', 'I am a graphic designer and self-taught illustrator based in Croatia. I mostly work as a freelance designer, illustrator and visual artist, situated in my hometown (Zagreb).'); ?>
-                  </p>
-                  <a hreh ="#" class="h4-uppercase">
-                    dive deeper into the project
-                  </a>
-                </div>
-                <div class="col-md-5">
-                    <img class="carousel-img" src=" <?php echo esc_url( get_theme_mod( 'carousel-image2' ) ); ?>" alt="Collab 2" >
-                </div>
+                  <div class="offset-md-1 col-md-1">
+                      <h2>02</h2>
+                      <h4 class="carousel-nav-sm">/ 03</h4>
+                  </div>
+                  <div class="col-md-4 d-block">
+                      <h4 class="h4-uppercase"><?php echo get_theme_mod('carousel-item-heading2', 'collaboration with tvornica snova'); ?></h4>
+                      <p class="big-line-height carousel-item-txt">
+				          <?php echo get_theme_mod('carousel-item-txt2', 'I am a graphic designer and self-taught illustrator based in Croatia. I mostly work as a freelance designer, illustrator and visual artist, situated in my hometown (Zagreb).'); ?>
+                      </p>
+                      <a hreh ="#" class="h4-uppercase">
+                          dive deeper into the project
+                      </a>
+                  </div>
+                  <div class="col-md-5">
+                      <img class="carousel-img" src="<?php echo esc_url( get_theme_mod( 'carousel-image2' ) ); ?>" alt="Collab 2" >
+                  </div>
               </div><!-- row -->
               <div class="row row-equal carousel-item m-t-0">
                 <div class="offset-md-1 col-md-1">
@@ -177,6 +177,4 @@
 
     </section>
 
-    <!-- Side menu navigation JS-->
-    <script src="<?php bloginfo('template_url'); ?>/js/script.js"></script>
     <?php get_footer(); ?>
