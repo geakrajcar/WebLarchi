@@ -124,46 +124,8 @@
       'priority'  => 12
     )));
 
-    //Books
-    $wp_customize->add_setting('showcase-books', array(
-      'default'   => _x('Books', 'larchi'),
-      'type'      => 'theme_mod'
-    ));
-    $wp_customize->add_control('showcase-books', array(
-      'label'   => __('Books - Heading', 'larchi'),
-      'section' => 'showcase',
-      'priority'  => 13
-    ));
-    $wp_customize->add_setting('showcase-books-txt', array(
-      'default'   => _x('Making characters and story feel like they are living and breathing, telling their stories are the things I love about illustrating children’s books.', 'larchi'),
-      'type'      => 'theme_mod'
-    ));
-    $wp_customize->add_control('showcase-books-txt', array(
-      'label'   => __('Books text left', 'larchi'),
-      'section' => 'showcase',
-      'priority'  => 14
-    ));
-    $wp_customize->add_setting('showcase-books-txt2', array(
-      'default'   => _x('A dream of mine was illustrating a children’s picture book. My first book as both writer and illustrator was “Talking Wood?”. Talking about environmental issues with young people can be tricky, but this short story can help start the conversation.', 'larchi'),
-      'type'      => 'theme_mod'
-    ));
-    $wp_customize->add_control('showcase-books-txt2', array(
-      'label'   => __('Books text right', 'larchi'),
-      'section' => 'showcase',
-      'priority'  => 15
-    ));
-    $wp_customize->add_setting('showcase-books-image', array(
-      'default'   => get_bloginfo('template_directory').'/img/books.png',
-      'type'      => 'theme_mod',
-      'transport' => 'refresh',
-    ));
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'showcase-books-image', array(
-      'label'   => __('Showcase Books image', 'larchi'),
-      'section' => 'showcase',
-      'settings' => 'showcase-books-image',
-      'priority'  => 16
-    )));
 
+    //Showcase-contact
     $wp_customize->add_setting('showcase-contact', array(
       'default'   => _x('Say hello!', 'larchi'),
       'type'      => 'theme_mod'
@@ -194,31 +156,29 @@
       'priority'  => 19
     ));
 
-
-
-    //Collaborations section
-    $wp_customize->add_section('collab', array(
-      'title'   => __('Showcase - Collaborations', 'larchi'),
-      'description' => sprintf(__('Options for collaborations','larchi')),
+    //Work section
+    $wp_customize->add_section('work', array(
+      'title'   => __('Showcase - Work', 'larchi'),
+      'description' => sprintf(__('Options for work','larchi')),
       'priority'    => 131
     ));
-    $wp_customize->add_setting('showcase-collab-heading', array(
-      'default'   => _x('Collaborations', 'larchi'),
+    $wp_customize->add_setting('showcase-work-heading', array(
+      'default'   => _x('Work', 'larchi'),
       'type'      => 'theme_mod'
     ));
-    $wp_customize->add_control('showcase-collab-heading', array(
-      'label'   => __('Collaborations - Heading', 'larchi'),
-      'section' => 'collab',
+    $wp_customize->add_control('showcase-work-heading', array(
+      'label'   => __('Work - Heading', 'larchi'),
+      'section' => 'work',
       'priority'  => 1
     ));
 
-    $wp_customize->add_setting('showcase-collab-txt', array(
+    $wp_customize->add_setting('showcase-work-txt', array(
       'default'   => _x('I have collaborated with a small network of beautiful people. We have had fun making creative things and we hope you enjoy them. :)', 'larchi'),
       'type'      => 'theme_mod'
     ));
-    $wp_customize->add_control('showcase-collab-txt', array(
-      'label'   => __('Collaborations text', 'larchi'),
-      'section' => 'collab',
+    $wp_customize->add_control('showcase-work-txt', array(
+      'label'   => __('Work text', 'larchi'),
+      'section' => 'work',
       'priority'  => 2
     ));
     $wp_customize->add_setting('carousel-item-heading1', array(
@@ -227,7 +187,7 @@
     ));
     $wp_customize->add_control('carousel-item-heading1', array(
       'label'   => __('Item 1 - heading', 'larchi'),
-      'section' => 'collab',
+      'section' => 'work',
       'priority'  => 3
     ));
     $wp_customize->add_setting('carousel-item-txt1', array(
@@ -236,7 +196,7 @@
     ));
     $wp_customize->add_control('carousel-item-txt1', array(
       'label'   => __('Item 1 - text', 'larchi'),
-      'section' => 'collab',
+      'section' => 'work',
       'priority'  => 4
     ));
     $wp_customize->add_setting('carousel-image1', array(
@@ -246,7 +206,7 @@
     ));
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'carousel-image1', array(
       'label'   => __('Item 1 - image', 'larchi'),
-      'section' => 'collab',
+      'section' => 'work',
       'settings' => 'carousel-image1',
       'priority'  => 5
     )));
@@ -256,7 +216,7 @@
     ));
     $wp_customize->add_control('carousel-item-heading2', array(
       'label'   => __('Item 2 - heading', 'larchi'),
-      'section' => 'collab',
+      'section' => 'work',
       'priority'  => 6
     ));
     $wp_customize->add_setting('carousel-item-txt2', array(
@@ -265,7 +225,7 @@
     ));
     $wp_customize->add_control('carousel-item-txt2', array(
       'label'   => __('Item 2 - text', 'larchi'),
-      'section' => 'collab',
+      'section' => 'work',
       'priority'  => 7
     ));
     $wp_customize->add_setting('carousel-image2', array(
@@ -275,7 +235,7 @@
     ));
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'carousel-image2', array(
       'label'   => __('Item 2 - image', 'larchi'),
-      'section' => 'collab',
+      'section' => 'work',
       'settings' => 'carousel-image2',
       'priority'  => 8
     )));
@@ -285,7 +245,7 @@
     ));
     $wp_customize->add_control('carousel-item-heading3', array(
       'label'   => __('Item 3 - heading', 'larchi'),
-      'section' => 'collab',
+      'section' => 'work',
       'priority'  => 9
     ));
     $wp_customize->add_setting('carousel-item-txt3', array(
@@ -294,7 +254,7 @@
     ));
     $wp_customize->add_control('carousel-item-txt3', array(
       'label'   => __('Item 3 - text', 'larchi'),
-      'section' => 'collab',
+      'section' => 'work',
       'priority'  => 10
     ));
     $wp_customize->add_setting('carousel-image3', array(
@@ -304,7 +264,7 @@
     ));
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'carousel-image3', array(
       'label'   => __('Item 3 - image', 'larchi'),
-      'section' => 'collab',
+      'section' => 'work',
       'settings' => 'carousel-image3',
       'priority'  => 11
     )));

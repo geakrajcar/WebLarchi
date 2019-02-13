@@ -19,46 +19,6 @@
     <?php wp_head(); ?>
   </head>
   <body>
-
-    <div id="splashscreen">
-    <img class="enter-link" src="<?php echo get_theme_mod('splashscreen', get_bloginfo('template_url').'/img/splashscreen.png'); ?>" alt="Larchi">
-    <div class="splashscreen-logo">
-    <nav class="navbar navbar-expand-lg navbar-light navbar-custom" >
-        <div class="d-flex flex-grow-1">
-            <span class="w-100 d-lg-none d-block"><!-- hidden spacer to center brand on mobile --></span>
-            <a class="navbar-brand d-none d-lg-inline-block position-fixed" href="#">
-              <?php
-              $custom_logo_id = get_theme_mod( 'custom_logo' );
-              $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
-              if ( has_custom_logo() ) {
-                      echo '<img src="'. esc_url( $logo[0] ) .'">';
-              } else {
-                      echo '<h1>'. get_bloginfo( 'name' ) .'</h1>';
-              }
-              ?>
-            </a>
-
-            <a class="navbar-brand-two mx-auto d-lg-none d-inline-block" href="#">
-              <?php
-              $custom_logo_id = get_theme_mod( 'custom_logo' );
-              $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
-              if ( has_custom_logo() ) {
-                      echo '<img src="'. esc_url( $logo[0] ) .'">';
-              } else {
-                      echo '<h1>'. get_bloginfo( 'name' ) .'</h1>';
-              }
-              ?>
-            </a>
-          </div>
-    </nav>
-  </div>
-    <div class="offset-md-1 splashscreen-div-txt enter-link">
-      <h1 class="splashscreen-heading"><?php echo get_theme_mod('splashscreen-heading', 'Fall into <br /> my world...'); ?></h1>
-      <h5 class="h5-mini">...and enjoy the ride <a href="#" role="button" class="splashscreen-btn btn btn-default btn-circle btn-xl shadow-none"><i class="fa fa-angle-down"></i>  </a></h5>
-    </div>
-
-    </div>
-    <div class="hide-on-splashscreen">
       <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
           <div class="d-flex flex-grow-1">
               <span class="w-100 d-lg-none d-block"><!-- hidden spacer to center brand on mobile --></span>

@@ -60,8 +60,8 @@ p{
   left:0;
 }
 .splashscreen-heading{
-  font-size: 4vw;
   padding-left:20px;
+    font-size:4vw;
 }
 .splashscreen-btn{
   background-color: #f9eddf !important;
@@ -151,7 +151,7 @@ p{
  }
  .showcase-img-div{
    color:#fff;
-   padding-right:0px;
+   padding-right:0;
    text-align: left;
  }
  .showcase-img{
@@ -161,13 +161,13 @@ p{
  .btn-circle {
      width: 30px;
      height: 30px;
-     padding: 6px 0px;
+     padding: 6px 0;
      border-radius: 15px;
      border-color: #DBDBDB;
      background-color: #fff;
      text-align: center;
-     font-size: 10px;
-     color: #DBDBDB;
+     font-size: 12px;
+     color: #737373;
      line-height: 1.42857;
      margin-right: 20px;
  }
@@ -181,11 +181,12 @@ p{
     line-height: 1.33;
     color: #737373;
 }
-.btn-circle:hover,.btn-circle.btn-xl:hover, .h5-mini a:hover, .splashscreen-btn:hover{
+.btn-circle:hover,.btn-circle.btn-xl:hover, .h5-mini a:hover, .splashscreen-btn:hover, .btn-square:hover{
   background-color: #E64C42 !important;
   border-color: #E64C42;
   color: #fff !important;
 }
+
 .rotate{
     /* Safari */
   -webkit-transform: rotate(90deg);
@@ -204,6 +205,7 @@ p{
   margin: 0 0 0 0;
   position:absolute;
   bottom:0;
+    left:23px;
 }
 .h5-mini a{
   margin-top:20px;
@@ -224,8 +226,8 @@ p{
    height:700px;
    padding-top:250px;
  }
- .showcase-career-txt, .showcase-books-txt, .showcase-contact-txt{
-   padding-left: 0px;
+ .showcase-career-txt, .showcase-contact-txt{
+   padding-left: 0;
    padding-top:20px;
  }
  .showcase-contact-a{
@@ -240,37 +242,32 @@ p{
  /*
   * Showcase illustrations
   */
+/*
 .showcase-illustrations{
   padding-top:200px;
 }
 .showcase-illustrations-img{
   padding-top:35px;
 }
-.showcase-illustrations-txt, .showcase-collab-txt{
-  padding-bottom: 30px;
-  padding-top:20px;
-  margin-bottom:0px;
-}
-.mini-hr {
-  width: 25px;
-  margin-top: 10px;
-  background-color: #E64C42;
-}
+.showcase-illustrations-txt, */
+
+
 /*
- * Showcase - Books
+ * Showcase - Work
 */
-.showcase-books{
-  padding-top:150px !important;
-}
-.showcase-books-txt p{
-  padding-bottom:40px !important;
-}
-/*
- * Showcase - Collaborations
-*/
-.showcase-collab{
+.showcase-work{
   padding-top: 150px;
   padding-bottom: 60px;
+}
+.showcase-work-txt{
+    padding-bottom: 30px;
+    padding-top:20px;
+    margin-bottom:0;
+}
+.mini-hr {
+    width: 25px;
+    margin-top: 10px;
+    background-color: #E64C42;
 }
 
 /* equal card height */
@@ -309,20 +306,29 @@ p{
   padding-bottom:6px;
   font-family: "TyponineSansPro-Regular", Helvetica, sans-serif;
 }
+.h5-uppercase-red{
+    color: #E64C42;
+    padding-left: 33px;
+    font-size:10pt;
+    text-transform: uppercase;
+    padding-bottom:25px;
+    margin-bottom:0;
+    font-family: "TyponineSansPro-Regular", Helvetica, sans-serif;
+}
 .h5-uppercase-no-link{
   font-size:9pt;
   text-transform: uppercase;
   padding-bottom:10px;
   font-family: "TyponineSansPro-Regular", Helvetica, sans-serif;
+    line-height:200%;
 }
-.h5-uppercase-no-link{
-  line-height:200%;
-}
+
 .h4-uppercase, .h4-uppercase:visited, .h5-uppercase, .h5-uppercase:visited {
   text-decoration: none;
   position: relative;
   color: #000;
 }
+/*
 .h4-uppercase:after, .h4-uppercase:visited:after, .h5-uppercase:after, .h5-uppercase:visited:after{
   content: '';
   height: 1px;
@@ -333,27 +339,62 @@ p{
   background: #E64C42;
   transition: 0.2s;
 }
+*/
 a:hover:after, a:visited:hover:after {
   width: 100%;
 }
 .carousel-img{
   max-height: 85%;
 }
+.btn-square{
+    border: 1px solid #000;
+    border-radius: 0;
+}
+.btn-square{
+    padding:10px 13px 10px 13px;
+    margin-bottom: 0;
+}
+
 .carousel-nav{
   padding-right:90px;
 }
 
 
 /*
- *Gallery
+ *Illustrations Gallery - review classes and css if we make just 1 ALL work gallery !
 */
+.illustrations-front, .work-front{
+    height:500px;
+}
+
+.quote-box {
+    overflow: hidden;
+    margin:0;
+}
+.illustrations .quote-box{
+    position:absolute;
+    bottom:0;
+}
+.quotation-mark{
+    font-size:250pt;
+    color: #f7f7f7;
+    margin-bottom: -240px;
+}
+.quote-text{
+    font-size: 35pt;
+    color: #414042;
+}
 .gallery {
     -webkit-column-count: 3;
     -moz-column-count: 3;
     column-count: 3;
     -webkit-column-width: 33%;
     -moz-column-width: 33%;
-    column-width: 33%; }
+    column-width: 33%;
+    padding-top:240px;
+    margin-top:10px;
+    padding-bottom:200px;
+}
 .gallery .pics {
     -webkit-transition: all 350ms ease;
     transition: all 350ms ease; }
