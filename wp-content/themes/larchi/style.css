@@ -363,7 +363,7 @@ a:hover:after, a:visited:hover:after {
 /*
  *Illustrations Gallery - review classes and css if we make just 1 ALL work gallery !
 */
-.illustrations-front, .work-front{
+.work-front{
     height:500px;
 }
 
@@ -371,7 +371,7 @@ a:hover:after, a:visited:hover:after {
     overflow: hidden;
     margin:0;
 }
-.illustrations .quote-box{
+.work .quote-box{
     position:absolute;
     bottom:0;
 }
@@ -402,7 +402,51 @@ a:hover:after, a:visited:hover:after {
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1); }
+.gallery .pics .wp-post-image{
+    position:relative;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: inherit;
+}
 
+.gallery .pics:hover .overlay {
+    opacity: 1;
+}
+
+.overlay-text {
+    font-family: "TyponineSansPro-Regular", Helvetica, sans-serif;
+    color: white;
+    font-size: 10pt;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.overlay-categories a{
+    text-transform: uppercase;
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+    color: #fff;
+}
+.mini-hr-white {
+    width: 25px;
+    margin-top: 10px;
+    margin-bottom:10px;
+    background-color: #fff;
+}
 @media (max-width: 450px) {
     .gallery {
         -webkit-column-count: 1;

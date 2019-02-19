@@ -14,7 +14,7 @@
 
 <section class="work">
     <!-- Intro Showcase -->
-    <div class="row illustrations-front">
+    <div class="row work-front">
         <div class="offset-md-1 col-md-4">
             <h4 class="h5-uppercase-red">work</h4>
             <h1 class="showcase-heading"><?php echo get_theme_mod('work-heading', 'A dream come true'); ?></h1>
@@ -55,6 +55,20 @@ $query = new WP_Query($args);
                 <?php
                 the_post_thumbnail( 'full', array( 'class' => 'img-fluid' ) ); ?>
             <?php endif; ?>
+            <div class="overlay" id="<?php echo get_the_ID();?>">
+                <div class="overlay-text">
+                    <span class="overlay-categories"><?php the_category(', ', '', get_the_ID()); ?></span>
+                    <hr class="mini-hr-white">
+                    <span class="overlay-project">
+                        <?php
+                        $posttags = get_the_tags();
+                        if ($posttags) {
+                            foreach($posttags as $tag) {
+                                echo $tag->name . ' ';
+                            }
+                        } ?></span>
+                </div>
+            </div>
             </div>
         <?php endwhile; ?>
         <?php endif; ?>
