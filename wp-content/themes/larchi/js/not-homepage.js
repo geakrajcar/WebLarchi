@@ -6,7 +6,7 @@ jQuery(function ($) {
         var projects = document.getElementsByClassName('overlay');
         Array.from(projects).forEach(function(v) {
             v.addEventListener("mouseenter", function() {
-                var colors = ['#e64c42', '#f6bcbb', '#4bbca6', '#99738e', '#659dbd', '#e27d60', '#ac3b61'];
+                var colors = ['#F6BCBB', '#0B6951', '#010101', '#E64C42', '#025A9A', '#E8B633', '#E27D60'];
                 this.style.backgroundColor = colors[Math.floor(this.id % colors.length)];
             });
             v.addEventListener("mouseleave", function() {

@@ -181,7 +181,7 @@ p{
     line-height: 1.33;
     color: #737373;
 }
-.btn-circle:hover,.btn-circle.btn-xl:hover, .h5-mini a:hover, .splashscreen-btn:hover, .btn-square:hover{
+.btn-circle:hover,.btn-circle.btn-xl:hover, .h5-mini a:hover, .splashscreen-btn:hover, .btn-square:hover, .btn-info:hover{
   background-color: #E64C42 !important;
   border-color: #E64C42;
   color: #fff !important;
@@ -446,6 +446,91 @@ a:hover:after, a:visited:hover:after {
     margin-top: 10px;
     margin-bottom:10px;
     background-color: #fff;
+}
+.modal-full {
+    min-width: 100%;
+    margin: 0;
+}
+
+.modal-full .modal-content {
+    min-height: 100vh;
+}
+.modal-header{
+    border-bottom: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding-left:92px;
+}
+.modal-title{
+    padding-top:50px;
+}
+.modal-title .mini-hr{
+    margin-top:16px;
+}
+.contractor{
+    text-transform: capitalize;
+}
+.modal-header .close{
+    margin-top: 40px;
+    padding-right:92px;
+    padding-top:0px;
+    font-size: 3rem;
+    color: #DBDBDB;
+}
+.modal-header .close:focus, .modal-header .close:active{
+    outline: none !important;
+    box-shadow: none;
+}
+
+/* push indicators under the image and leave space under carousel-inner so they don't interfere with other elements.*/
+
+.carousel-indicators {
+    margin-bottom:-80px;
+}
+
+.carousel-indicators li {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #DBDBDB;
+    border-radius: 12px;
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+}
+.carousel-indicators li {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #DBDBDB;
+    border-radius: 10px;
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+}
+.carousel-indicators .active{
+    border-color: #E64C42;
+    background-color: #E64C42;
+}
+.modal-footer-row{
+    margin-top:50px;
+    font-family: "TyponineSansPro-Regular", Helvetica, sans-serif;
+
+}
+.btn-info{
+    color: #E64C42;
+    border-color: #E64C42;
+    width: 30px;
+    height: 30px;
+    padding: 6px 0;
+    border-radius: 15px;
+    background-color: #fff;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.42857;
+    margin-right: 20px;
+}
+.btn:focus, .btn:active {
+    outline: none !important;
+    box-shadow: none;
 }
 @media (max-width: 450px) {
     .gallery {

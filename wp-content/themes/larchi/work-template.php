@@ -55,10 +55,12 @@ $query = new WP_Query($args);
                 <?php
                 the_post_thumbnail( 'full', array( 'class' => 'img-fluid' ) ); ?>
             <?php endif; ?>
+
             <div class="overlay" id="<?php echo get_the_ID();?>">
                 <div class="overlay-text">
                     <span class="overlay-categories"><?php the_category(', ', '', get_the_ID()); ?></span>
                     <hr class="mini-hr-white">
+                    <a href="#myModal" role="button" data-toggle="modal">
                     <span class="overlay-project">
                         <?php
                         $posttags = get_the_tags();
@@ -67,13 +69,74 @@ $query = new WP_Query($args);
                                 echo $tag->name . ' ';
                             }
                         } ?></span>
+                    </a>
                 </div>
             </div>
             </div>
+
         <?php endwhile; ?>
         <?php endif; ?>
     </div><!-- container -->
 </div>
+
+<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-full" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title h4-uppercase">Priča li šuma
+                    <br>
+                    <hr align="left" class="mini-hr">
+                    <span class="contractor">Personal work</span>
+                </h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body" id="result">
+                <div class="row">
+                    <div class="offset-md-3 col-md-6">
+                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#myCarousel" data-slide-to="1"></li>
+                                <li data-target="#myCarousel" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img class="d-block w-100" src="<?php echo get_bloginfo('template_url').'/img/rectangle.png'?>" alt="First slide" >
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="<?php echo get_bloginfo('template_url').'/img/rectangle.png'?>" alt="Second slide" >
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="<?php echo get_bloginfo('template_url').'/img/rectangle.png'?>" alt="Third slide" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row modal-footer-row">
+                    <div class="col-md-2 text-center">
+                        <button type="button" href="#" class="btn btn-default btn-info shadow-none" data-slide="prev">i </button>
+                    </div>
+                    <div class="offset-md-8 col-md-2">
+                        <button type="button" href="#" class="btn btn-default btn-circle left carousel-control shadow-none" data-slide="prev"><i class="fa fa-angle-left"></i>  </button>
+                        <button type="button" href="#" class="btn btn-default btn-circle right carousel-control shadow-none" data-slide="next"><i class="fa fa-angle-right"></i>  </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- modal-dialog -->
+</div> <!-- modal -->
+
+
+
+
+
+
+
+
+
 
 
 
