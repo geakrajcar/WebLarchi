@@ -13,5 +13,15 @@ jQuery(function ($) {
                 this.style.backgroundColor = "inherit";
             });
         });
+
+
+        $("#btn-modal-info").click(function() {
+            document.getElementById("modal-main").classList.add('d-none');
+            document.getElementById("modal-info").classList.remove('d-none');
+        });
+        $("#modal-info").click(function() {
+            document.getElementById("modal-info").classList.add('d-none');
+            document.getElementById("modal-main").classList.remove('d-none');
+        });
     });
 });

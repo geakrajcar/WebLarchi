@@ -299,12 +299,28 @@ p{
   padding-top:7px;
   padding-left:7px;
 }
+.numbering{
+    padding-left:0;
+}
 
 .h4-uppercase{
   font-size:10pt;
   text-transform: uppercase;
   padding-bottom:6px;
   font-family: "TyponineSansPro-Regular", Helvetica, sans-serif;
+}
+.h4-capitalize{
+    text-transform: capitalize;
+    font-size:10pt;
+    padding-bottom:6px;
+    font-family: "TyponineSansPro-Regular", Helvetica, sans-serif;
+}
+.h4-grey{
+    color:#DBDBDB;
+    font-size:10pt;
+    text-transform: uppercase;
+    padding-bottom:6px;
+    font-family: "TyponineSansPro-Regular", Helvetica, sans-serif;
 }
 .h5-uppercase-red{
     color: #E64C42;
@@ -328,18 +344,7 @@ p{
   position: relative;
   color: #000;
 }
-/*
-.h4-uppercase:after, .h4-uppercase:visited:after, .h5-uppercase:after, .h5-uppercase:visited:after{
-  content: '';
-  height: 1px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0%;
-  background: #E64C42;
-  transition: 0.2s;
-}
-*/
+
 a:hover:after, a:visited:hover:after {
   width: 100%;
 }
@@ -467,9 +472,7 @@ a:hover:after, a:visited:hover:after {
 .modal-title .mini-hr{
     margin-top:16px;
 }
-.contractor{
-    text-transform: capitalize;
-}
+
 .modal-header .close{
     margin-top: 40px;
     padding-right:92px;
@@ -509,6 +512,28 @@ a:hover:after, a:visited:hover:after {
 .carousel-indicators .active{
     border-color: #E64C42;
     background-color: #E64C42;
+}
+#modal-info{
+    padding-top:15%;
+}
+.modal-info-list{
+    color: #414042;
+    font-size:9pt;
+    text-transform: capitalize;
+    list-style-type:none;
+    padding-left:0;
+}
+.modal-info-list li{
+    padding-bottom:6px;
+}
+.modal-body .h5-uppercase-red{
+    padding-left: 0;
+    padding-bottom: 10px;
+}
+.modal-body p{
+    font-size: 10pt;
+    line-height: 200%;
+    padding-top: 20px;
 }
 .modal-footer-row{
     margin-top:50px;

@@ -51,7 +51,7 @@
       <section class="work-carousel carousel slide" data-ride="carousel" id="postsCarousel">
           <div class="container p-t-0 m-t-2 carousel-inner">
               <div class="row row-equal carousel-item active m-t-0">
-                <div class="offset-md-1 col-md-1">
+                <div class="offset-md-1 col-md-1 numbering">
                   <h2>01</h2>
                   <h4 class="carousel-nav-sm">/ 03</h4>
                 </div>
@@ -66,7 +66,7 @@
                 </div>
               </div><!-- row -->
               <div class="row row-equal carousel-item m-t-0">
-                  <div class="offset-md-1 col-md-1">
+                  <div class="offset-md-1 col-md-1 numbering">
                       <h2>02</h2>
                       <h4 class="carousel-nav-sm">/ 03</h4>
                   </div>
@@ -81,7 +81,7 @@
                   </div>
               </div><!-- row -->
               <div class="row row-equal carousel-item m-t-0">
-                <div class="offset-md-1 col-md-1">
+                <div class="offset-md-1 col-md-1 numbering">
                   <h2>03</h2>
                   <h4 class="carousel-nav-sm">/ 03</h4>
                 </div>
