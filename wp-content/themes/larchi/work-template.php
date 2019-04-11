@@ -21,7 +21,7 @@
             <p class="showcase-txt">
                 <?php echo get_theme_mod('work-txt', 'Honestly, getting to collaborate with some amazing creative and like-minded people while retaining your own voice is to me, perfect.'); ?>
             </p>
-            <h5 class="h5-mini">scroll into gallery <a href="#gallery" role="button" class="btn btn-default btn-circle btn-xl"><i class="fa fa-angle-down"></i>  </a></h5>
+            <h5 class="h5-mini hide-on-mobile">scroll into gallery <a href="#gallery" role="button" class="btn btn-default btn-circle btn-xl"><i class="fa fa-angle-down"></i>  </a></h5>
         </div>
         <div class="offset-md-1 col-md-4 text-right">
             <blockquote class="quote-box">
@@ -48,9 +48,9 @@ $query = new WP_Query($args);
 ?>
 <div class="content">
     <?php if ( $query->have_posts() ) : ?>
-    <div class="gallery offset-md-2 col-md-8 text-center" id="gallery">
+    <div class="gallery offset-md-2 col-md-8 col-sm-12 text-center" id="gallery">
         <?php while ( $query->have_posts() ) : $query->the_post();?>
-            <div class="mb-3 pics animation all">
+            <div class="mb-md-3 pics animation all">
             <?php if( has_post_thumbnail()) : ?>
                 <?php
                 the_post_thumbnail( 'full', array( 'class' => 'img-fluid' ) ); ?>

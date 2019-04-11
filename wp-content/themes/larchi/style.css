@@ -158,6 +158,7 @@ p{
    max-width:100%;
    max-height:100%;
  }
+
  .btn-circle {
      width: 30px;
      height: 30px;
@@ -485,8 +486,6 @@ a:hover:after, a:visited:hover:after {
     box-shadow: none;
 }
 
-/* push indicators under the image and leave space under carousel-inner so they don't interfere with other elements.*/
-
 .carousel-indicators {
     margin-bottom:-80px;
 }
@@ -557,16 +556,6 @@ a:hover:after, a:visited:hover:after {
     outline: none !important;
     box-shadow: none;
 }
-@media (max-width: 450px) {
-    .gallery {
-        -webkit-column-count: 1;
-        -moz-column-count: 1;
-        column-count: 1;
-        -webkit-column-width: 100%;
-        -moz-column-width: 100%;
-        column-width: 100%;
-    }
-}
 
 /*
  * Footer
@@ -580,4 +569,133 @@ a:hover:after, a:visited:hover:after {
   font-size: 9pt;
   text-align: center;
   background-color: #FEF4E8;
+}
+
+@media(max-width: 1000px){
+    .hide-on-mobile{
+        visibility: hidden !important;
+    }
+    .numbering h2{
+        font-size: 3rem;
+    }
+    .carousel-nav-sm{
+        font-size: 10pt;
+        padding-top:10px;
+    }
+    .carousel-item .h4-uppercase{
+        padding-top:10px;
+    }
+    .carousel-item{
+        padding-bottom: 40px;
+    }
+}
+/* 812px widest landscape mode phone */
+@media (max-width: 813px) {
+    .navbar-toggler{
+        border: none;
+    }
+    .showcase-heading, .showcase-career, .showcase-work, .showcase-contact{
+        padding-left:20px;
+        padding-right: 20px;
+    }
+    .showcase-heading{
+        padding-top:45px;
+    }
+    .showcase-txt{
+        padding-left:20px;
+        padding-right: 20px;
+        padding-top:30px;
+    }
+    .showcase-img{
+        padding-left:15px;
+    }
+    .showcase-career, .showcase-work, .showcase-contact{
+        height:auto;
+        padding-top:90px;
+    }
+    .numbering h2{
+        display:inline;
+    }
+    .carousel-nav-sm{
+        display:inline;
+    }
+    .carousel-inner{
+        padding-left:20px;
+    }
+    .showcase-contact-a{
+        padding-bottom: 90px;
+    }
+    .work-front{
+        height:auto;
+    }
+    .h5-uppercase-red{
+        padding-left:20px;
+        padding-right:20px;
+        padding-bottom:0;
+    }
+    .quote-box {
+        overflow: visible;
+        padding-left:20px;
+        padding-right:20px;
+    }
+    .work .quote-box{
+        position: relative;
+    }
+    .quotation-mark{
+        font-size:220pt;
+        color: #f7f7f7;
+        margin-bottom: -200px;
+        margin-top:-100px;
+    }
+    .quote-text{
+        font-size: 2.0rem;
+    }
+    .gallery {
+        padding:90px 0 90px 0;
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+        -webkit-column-width: 100%;
+        -moz-column-width: 100%;
+        column-width: 100%;
+    }
+
+}
+@media (max-width: 768px) {
+    .numbering{
+        height:80px !important;
+        padding-left: 15px;
+    }
+    .project-preview{
+        height: auto !important;
+    }
+    .carousel-nav{
+        padding-right:0;
+    }
+    .carousel-item .h4-uppercase{
+        padding-top:40px;
+    }
+    .carousel-inner{
+        padding-right: 0;
+    }
+    .carousel-img{
+        max-width:95%;
+        max-height:100%;
+        position: absolute;
+        right: 0;
+    }
+}
+
+@media(max-width:400px){
+
+    .carousel-item{
+        padding-bottom: 0;
+    }
+    .carousel-item .h4-uppercase{
+        padding-top:0;
+    }
+    .btn-square{
+        width: 100%;
+        margin-top:15px;
+    }
 }

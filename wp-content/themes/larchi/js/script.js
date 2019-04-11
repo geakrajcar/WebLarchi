@@ -28,7 +28,7 @@ $(window).scroll(function() {
     var scrollDistance = $(window).scrollTop();
 
     // Show/hide menu on scroll
-    if (scrollDistance >= 600) {
+    if (scrollDistance >= 400) {
     		$('.side-navigation').fadeIn("fast");
     } else {
     		$('.side-navigation').fadeOut("fast");

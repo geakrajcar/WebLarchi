@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
   <!-- Side Navigation -->
-  <nav class="side-navigation" id="sideNav" align="right">
+  <nav class="side-navigation hide-on-mobile" id="sideNav" align="right">
     <a class="navigation__link active" href="#nav-career">Career <i class="fa fa-circle-thin" aria-hidden="true"></i></a>
     <a class="navigation__link" href="#nav-work">Work <i class="fa fa-circle-thin" aria-hidden="true"></i></a>
     <a class="navigation__link " href="#nav-contact">Contact<i class="fa fa-circle-thin" aria-hidden="true"></i> </a>
@@ -9,15 +9,21 @@
 
     <section class="showcase">
       <!-- Intro Showcase -->
+        <div class="row d-block d-md-none">
+            <div class="offset-md-2 col-md-6 showcase-img-div">
+                <img class="showcase-img" src="<?php echo get_theme_mod('showcase_image', get_bloginfo('template_url').'/img/showcase.png'); ?>" alt="Showcase image">
+            </div>
+        </div>
       <div class="row">
-        <div class="offset-md-1 col-md-3">
+        <div class="offset-md-1 col-md-4">
+
           <h1 class="showcase-heading"><?php echo get_theme_mod('showcase-heading', 'Part of me'); ?></h1>
           <p class="showcase-txt">
             <?php echo get_theme_mod('showcase-txt', 'HI, I’M LARA, A CREATIVE MIND, A PROFESSIONAL DAY DREAMER AND MOST OF ALL A PASSIONATE DIGITAL AND GRAPHIC DESIGNER AND SELF-TAUGHT DIGITAL ILLUSTRATOR.'); ?>
           </p>
-          <h5 class="h5-mini">scroll into my imagination <a href="#nav-career" role="button" class="btn btn-default btn-circle btn-xl"><i class="fa fa-angle-down"></i>  </a></h5>
+          <h5 class="h5-mini hide-on-mobile">scroll into my imagination <a href="#nav-career" role="button" class="btn btn-default btn-circle btn-xl"><i class="fa fa-angle-down"></i>  </a></h5>
         </div>
-        <div class="offset-md-2 col-md-6 showcase-img-div">
+        <div class="offset-md-1 col-md-6 showcase-img-div d-none d-md-block">
           <img class="showcase-img" src="<?php echo get_theme_mod('showcase_image', get_bloginfo('template_url').'/img/showcase.png'); ?>" alt="Showcase image">
         </div>
       </div><!-- row -->
@@ -51,60 +57,77 @@
       <section class="work-carousel carousel slide" data-ride="carousel" id="postsCarousel">
           <div class="container p-t-0 m-t-2 carousel-inner">
               <div class="row row-equal carousel-item active m-t-0">
-                <div class="offset-md-1 col-md-1 numbering">
+                <div class="offset-lg-1 col-lg-1 col-md-2 col-sm-12 numbering">
                   <h2>01</h2>
                   <h4 class="carousel-nav-sm">/ 03</h4>
                 </div>
-                <div class="col-md-4 d-block">
+                  <div class="col-md-4 col-lg-5 col-sm-12 d-block d-md-none">
+                      <img class="carousel-img" src="<?php echo esc_url( get_theme_mod( 'carousel-image1' ) ); ?>" alt="Collab 1" >
+                  </div>
+                <div class="col-md-4 col-sm-12 d-block project-preview">
                   <h4 class="h4-uppercase"><?php echo get_theme_mod('carousel-item-heading1', 'collaboration with tvornica snova'); ?></h4>
                   <p class="big-line-height carousel-item-txt">
                     <?php echo get_theme_mod('carousel-item-txt1', 'I am a graphic designer and self-taught illustrator based in Croatia. I mostly work as a freelance designer, illustrator and visual artist, situated in my hometown (Zagreb).'); ?>
                   </p>
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-4 col-lg-5 col-sm-12 d-none d-sm-block">
                     <img class="carousel-img" src="<?php echo esc_url( get_theme_mod( 'carousel-image1' ) ); ?>" alt="Collab 1" >
                 </div>
+
               </div><!-- row -->
+
               <div class="row row-equal carousel-item m-t-0">
-                  <div class="offset-md-1 col-md-1 numbering">
+                  <div class="offset-lg-1 col-lg-1 col-md-2 col-sm-12 numbering">
                       <h2>02</h2>
-                      <h4 class="carousel-nav-sm">/ 03</h4>
+                      <h4 class="carousel-nav-sm align-top">/ 03</h4>
                   </div>
-                  <div class="col-md-4 d-block">
+                  <div class="col-md-4 col-lg-5 col-sm-12 d-block d-md-none">
+                      <img class="carousel-img" src="<?php echo esc_url( get_theme_mod( 'carousel-image2' ) ); ?>" alt="Collab 1" >
+                  </div>
+                  <div class="col-md-4 col-sm-12 d-block project-preview">
                       <h4 class="h4-uppercase"><?php echo get_theme_mod('carousel-item-heading2', 'collaboration with tvornica snova'); ?></h4>
                       <p class="big-line-height carousel-item-txt">
-				          <?php echo get_theme_mod('carousel-item-txt2', 'I am a graphic designer and self-taught illustrator based in Croatia. I mostly work as a freelance designer, illustrator and visual artist, situated in my hometown (Zagreb).'); ?>
+                          <?php echo get_theme_mod('carousel-item-txt2', 'I am a graphic designer and self-taught illustrator based in Croatia. I mostly work as a freelance designer, illustrator and visual artist, situated in my hometown (Zagreb).'); ?>
                       </p>
                   </div>
-                  <div class="col-md-5">
-                      <img class="carousel-img" src="<?php echo esc_url( get_theme_mod( 'carousel-image2' ) ); ?>" alt="Collab 2" >
+                  <div class="col-md-4 col-lg-5 col-sm-12 d-none d-sm-block">
+                      <img class="carousel-img" src="<?php echo esc_url( get_theme_mod( 'carousel-image2' ) ); ?>" alt="Collab 1" >
                   </div>
               </div><!-- row -->
               <div class="row row-equal carousel-item m-t-0">
-                <div class="offset-md-1 col-md-1 numbering">
+                <div class="offset-lg-1 col-lg-1 col-md-2 col-sm-12 numbering">
                   <h2>03</h2>
-                  <h4 class="carousel-nav-sm">/ 03</h4>
+                  <h4 class="carousel-nav-sm align-top">/ 03</h4>
                 </div>
-                <div class="col-md-4 d-block">
-                  <h4 class="h4-uppercase"><?php echo get_theme_mod('carousel-item-heading3', 'collaboration with tvornica snova'); ?></h4>
-                  <p class="big-line-height carousel-item-txt">
-                    <?php echo get_theme_mod('carousel-item-txt3', 'I am a graphic designer and self-taught illustrator based in Croatia. I mostly work as a freelance designer, illustrator and visual artist, situated in my hometown (Zagreb).'); ?>
-                  </p>
-                </div>
-                <div class="col-md-5">
-                    <img class="carousel-img" src="<?php echo esc_url( get_theme_mod( 'carousel-image3' ) ); ?>" alt="Collab 1" >
-                </div>
+                  <div class="col-md-4 col-lg-5 col-sm-12 d-block d-md-none">
+                      <img class="carousel-img" src="<?php echo esc_url( get_theme_mod( 'carousel-image3' ) ); ?>" alt="Collab 1" >
+                  </div>
+                  <div class="col-md-4 col-sm-12 d-block project-preview">
+                      <h4 class="h4-uppercase"><?php echo get_theme_mod('carousel-item-heading3', 'collaboration with tvornica snova'); ?></h4>
+                      <p class="big-line-height carousel-item-txt">
+                          <?php echo get_theme_mod('carousel-item-txt3', 'I am a graphic designer and self-taught illustrator based in Croatia. I mostly work as a freelance designer, illustrator and visual artist, situated in my hometown (Zagreb).'); ?>
+                      </p>
+                  </div>
+                  <div class="col-md-4 col-lg-5 col-sm-12 d-none d-sm-block">
+                      <img class="carousel-img" src="<?php echo esc_url( get_theme_mod( 'carousel-image3' ) ); ?>" alt="Collab 1" >
+                  </div>
               </div><!-- row -->
           </div>
 
           <div class="container">
+            <div class="row carousel-nav-mobile">
+                <div class="col-sm-12 carousel-nav text-right d-block d-sm-none">
+                    <button type="button" href="#postsCarousel" class="btn btn-default btn-circle left carousel-control shadow-none" data-slide="prev"><i class="fa fa-angle-left"></i>  </button>
+                    <button type="button" href="#postsCarousel" class="btn btn-default btn-circle right carousel-control shadow-none" data-slide="next"><i class="fa fa-angle-right"></i>  </button>
+                </div>
+            </div>
             <div class="row">
                 <div class="offset-md-2 col-md-4">
                     <a href ="<?php echo get_page_link( get_page_by_title( work )->ID ); ?>" role ="button" class="btn btn-default btn-square h4-uppercase">
                         dive deeper into the projects
                     </a>
                 </div>
-                <div class="col-md-5 carousel-nav text-right">
+                <div class="col-md-5 carousel-nav text-right hide-on-mobile">
                   <button type="button" href="#postsCarousel" class="btn btn-default btn-circle left carousel-control shadow-none" data-slide="prev"><i class="fa fa-angle-left"></i>  </button>
                   <button type="button" href="#postsCarousel" class="btn btn-default btn-circle right carousel-control shadow-none" data-slide="next"><i class="fa fa-angle-right"></i>  </button>
                 </div>

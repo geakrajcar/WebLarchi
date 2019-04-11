@@ -61,7 +61,6 @@
     <div class="hide-on-splashscreen">
       <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
           <div class="d-flex flex-grow-1">
-              <span class="w-100 d-lg-none d-block"><!-- hidden spacer to center brand on mobile --></span>
               <!-- add position-fixed to navbar brand -->
               <a class="navbar-brand d-none d-lg-inline-block position-fixed" href="#">
                 <?php
