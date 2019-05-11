@@ -49,12 +49,11 @@ $query = new WP_Query($args);
 <div class="content">
     <?php if ( $query->have_posts() ) : ?>
     <div class="gallery offset-md-2 col-md-8 col-sm-12 text-center" id="gallery">
-        <?php while ( $query->have_posts() ) : $query->the_post();?>
+        <?php while ( $query->have_posts() ) : $query->the_post(); ?>
             <div class="mb-md-3 pics animation all">
             <?php if( has_post_thumbnail()) : ?>
                 <?php
                 the_post_thumbnail( 'full', array( 'class' => 'img-fluid' ) ); ?>
-            <?php endif; ?>
 
             <div class="overlay" id="<?php echo get_the_ID();?>">
                 <div class="overlay-text">
@@ -98,34 +97,67 @@ $query = new WP_Query($args);
                         </div>
                         <div class="modal-body" id="result">
                             <div class="row">
-                                <div class="offset-md-3 col-md-6">
-                                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                <div class="offset-lg-3 col-lg-6 offset-md-1 col-md-10">
+                                    <!-- Carousel -->
+                                    <div id="myCarousel-<?php the_ID();?>" class="carousel slide" data-ride="carousel">
                                         <ol class="carousel-indicators">
-                                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                            <li data-target="#myCarousel" data-slide-to="1"></li>
-                                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                                        <?php
+                                        $attachments= get_attached_media( 'image', $post );
+
+
+                                        $j = sizeof($attachments) - 1;
+                                        for($index = 0; $index < $j; $index++) {
+                                            if($index == 0){
+                                                ?>
+                                                <li data-target="#myCarousel-<?php the_ID();?>" data-slide-to="<?php echo $index;?>" class="active"></li>
+                                            <?php
+                                            }
+                                            elseif ($index > 0 ){
+                                                ?>
+                                                <li data-target="#myCarousel-<?php the_ID();?>" data-slide-to="<?php echo $index;?>"></li>
+                                            <?php
+                                            }
+                                            ?>
+
+                                            <?php
+                                        }
+                                        ?>
                                         </ol>
                                         <div class="carousel-inner">
-                                            <div class="carousel-item active">
-                                                <img class="d-block w-100" src="<?php echo get_bloginfo('template_url').'/img/rectangle.png'?>" alt="First slide" >
-                                            </div>
+                                        <?php
+                                        $i = 0;
+                                        foreach($attachments as $att_id => $attachment) {
+                                            $full_img_url = wp_get_attachment_url($attachment->ID);
+                                            if ($i == 0){
+                                                $i++;
+                                            }
+                                            elseif ($i == 1){
+                                                $i++;
+                                                ?>
+                                                <div class="carousel-item active">
+                                                    <img class="d-block w-100" src="<?php echo $full_img_url ?>">
+                                                </div>
+                                                <?php
+                                            }
+                                        elseif ($i > 1) {
+                                                $i++;
+                                            ?>
                                             <div class="carousel-item">
-                                                <img class="d-block w-100" src="<?php echo get_bloginfo('template_url').'/img/rectangle.png'?>" alt="Second slide" >
+                                                <img class="d-block w-100" src="<?php echo $full_img_url ?>">
                                             </div>
-                                            <div class="carousel-item">
-                                                <img class="d-block w-100" src="<?php echo get_bloginfo('template_url').'/img/rectangle.png'?>" alt="Third slide" >
-                                            </div>
+                                            <?php
+                                        }
+                                        }
+                                        ?>
                                         </div>
                                     </div>
+                                    <!-- /Carousel -->
+
                                 </div>
                             </div>
                             <div class="row modal-footer-row">
                                 <div class="col-md-2 text-center">
                                     <button id="btn-modal-info" type="button" href="#" class="btn btn-default btn-info shadow-none">i </button>
-                                </div>
-                                <div class="offset-md-8 col-md-2">
-                                    <button type="button" href="#" class="btn btn-default btn-circle left carousel-control shadow-none" data-slide="prev"><i class="fa fa-angle-left"></i>  </button>
-                                    <button type="button" href="#" class="btn btn-default btn-circle right carousel-control shadow-none" data-slide="next"><i class="fa fa-angle-right"></i>  </button>
                                 </div>
                             </div>
                         </div>
@@ -134,13 +166,13 @@ $query = new WP_Query($args);
                     <div class="modal-content d-none" id="modal-info">
                         <div class="modal-body" id="result">
                             <div class="row">
-                                <div class="offset-md-2 col-md-1 text-right">
+                                <div class="offset-md-1 col-md-1 col-sm-1 col-xs-1 text-right">
                                     <h4 class="h4-grey">YEAR</h4>
                                     <ul class="modal-info-list">
                                         <li>2019</li>
                                     </ul>
                                 </div>
-                                <div class="col-md-2">
+                                <div class="col-md-2 col-sm-10 col-xs-11 text-left">
                                     <h4 class="h4-grey">DELIVERABLES</h4>
                                     <ul class="modal-info-list">
                                         <li>digital design</li>
@@ -148,7 +180,7 @@ $query = new WP_Query($args);
                                         <li>graphic design</li>
                                     </ul>
                                 </div>
-                                <div class="col-md-5 text-left modal-info-details">
+                                <div class="col-md-6 col-sm-12 col-xs-12 text-left modal-info-details">
                                     <h4 class="h5-uppercase-red">work</h4>
                                     <h1><?php the_title();?></h1>
                                     <?php the_content();?>
@@ -165,7 +197,7 @@ $query = new WP_Query($args);
                 </div> <!-- modal-dialog -->
             </div> <!-- modal -->
 
-
+            <?php endif; ?>
         <?php endwhile; ?>
         <?php endif; ?>
     </div><!-- container -->
